@@ -101,6 +101,9 @@ body {
 .icons i {
     font-size: 2vw;
 }
+ a{
+    cursor: pointer;
+}
 
 #bg-img {
     height: 90%;
