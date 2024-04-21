@@ -13,7 +13,7 @@ body {
 }
 
 body {
-    padding: 7vw 6vw 0 6vw;
+    /* padding: 7vw 6vw 0 6vw; */
     background-color: #dfdfdf;
     caret-color: transparent;
     scroll-behavior: smooth;
