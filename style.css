@@ -164,6 +164,7 @@ nav{
     background-color: rgb(255, 255, 255);
     padding: 0 30px;
     border-bottom: 1px solid gray;
+    z-index: 1000;
 }
 
 nav ul{
