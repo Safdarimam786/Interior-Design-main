@@ -154,26 +154,82 @@ body {
     height: 30px;
 }
 
-.navEle {
+
+nav{
+
     display: flex;
     justify-content: space-between;
-    gap: 40px;
+   height: 60px;
     align-items: center;
-    z-index: 1;
+    background-color: rgb(255, 255, 255);
+    padding: 0 30px;
+    border-bottom: 1px solid gray;
 }
 
-.navEle a {
-    text-transform: uppercase;
-    font-size: 12px;
+nav ul{
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    /* padding-right: 20px; */
+}
+
+nav a::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    display: block;
+    margin: auto;
+    background: rgba(255, 34, 0, 0.91);
+    transition: 0.4s ease;
+}
+
+nav a:hover::after{
+    width: 100%;
+}
+
+nav a{
+    display: inline-block;
     text-decoration: none;
-    color: grey;
+    text-transform: uppercase;
+    color:  black;
+    font-size: 15px;
     font-weight: 600;
 }
 
-.navEle a:hover {
-    color: black;
+nav p{
+    font-size: 18px;
     font-weight: 700;
+    text-transform: uppercase;
+   
 }
+
+.hamburger {
+    display: none;
+  }
+
+  .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    border-radius: 3rem;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: black;
+  }
+
+
+
+
+.logo {
+    
+    font-size: 24px;
+}
+
 
 .page2 {
     height: 70%;
