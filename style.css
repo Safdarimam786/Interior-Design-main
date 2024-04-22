@@ -666,49 +666,92 @@ nav p{
 
 
 
-@media (max-width:768px){
+@media only screen and (max-width: 768px) {
 
-    #menu-btn{
-        display: inline-block;
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow-x: hidden;
     }
 
-    .header .navbar{
-        position: absolute;
-        top:100%; right: -100%;
-        background: #fff;
-        width: 30rem;
-        height: calc(100vh - 9.5rem);
+
+
+
+    .nav-menu {
+      position: fixed;
+      left: 100%;
+      top: 2.7rem;
+      
+      backdrop-filter: blur(5px);
+
+      flex-direction: column;
+      background-color: #fafafa4b;
+      height:100vh ;
+      width: 100%;
+      border-radius: 10px;
+      text-align: center;
+      transition: 0.3s;
+      z-index: 1000;
+      /* box-shadow: 0 10px 27px var(--background-color); */
     }
 
-    .header .navbar.active{
-        right:0;
+    .nav-menu.active {
+      left: 0;
     }
 
-    .header .navbar a{
-        color:var(--black);
-        display: block;
-        margin:1.5rem;
-        padding:.5rem;
-        font-size: 2rem;
+    .nav-item {
+      margin: 2.5rem 0;
     }
 
-    .header .search-form{
-        width: 90%;
-        right: 2rem;
+    .hamburger {
+      display: block;
+      cursor: pointer;
     }
 
-    .home{
-        background-position: left;
-        justify-content: center;
-        text-align: center;
+    .nav-link {
+      color: var(--white-text);
     }
 
-    .home .content h3{
-        font-size: 4.5rem;
+    .nav-link {
+      /* position: relative; */
+      color: var(--white-text);
+      text-decoration: none;
     }
 
-    .home .content p{
-        font-size: 1.5rem;
+    .nav-link:hover {
+      color: var(--white-text);
     }
 
-}
+    .nav-link::before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 2px;
+      bottom: 3px;
+      left: 0;
+/*       background-color: var(--white-text); */
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+
+    .nav-link:hover::before {
+      border-radius: 2rem;
+      transform: scaleX(1);
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+  }
