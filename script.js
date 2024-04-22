@@ -1,3 +1,14 @@
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+
+hamburger.addEventListener("click", mobileMenu);
+
+function mobileMenu() {
+  hamburger.classList.toggle("active");
+  navMenu.classList.toggle("active");
+}
+
+
 const tl = gsap.timeline();
 
 tl.from('.logo',{
@@ -204,4 +215,8 @@ gsap.from('.footer-logo img, .footer-logo h2, .footer-logo~p, .boxes h2, .boxes 
         scrup: 2,
     }
 })
+
+
+
+
 
